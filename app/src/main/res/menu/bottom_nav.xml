@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Anasayfa"
+        android:id="homePage">
+
+    </item>
+    <item
+        android:title="Keşfet"
+        android:id="discoverItem">
+
+    </item>
+    <item
+        android:title="Favorilerim"
+        android:id="favsItem">
+
+    </item>
+    <item
+        android:title="Profil"
+        android:id="profileItem">
+    </item>
+
+</menu>
