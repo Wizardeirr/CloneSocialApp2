@@ -2,26 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:title="Anasayfa"
-        android:id="homePage"
+        android:id="@+id/homePage"
         android:icon="@drawable/home_icon"
         >
 
     </item>
     <item
         android:title="Keşfet"
-        android:id="discoverItem"
+        android:id="@+id/discoveryPage"
         android:icon="@drawable/search_icon">
 
     </item>
     <item
         android:title="Favorilerim"
-        android:id="favsItem"
+        android:id="@+id/favsPage"
         android:icon="@drawable/fav_icon">
 
     </item>
     <item
         android:title="Profil"
-        android:id="profileItem"
+        android:id="@+id/profilePage"
         android:icon="@drawable/person_icon">
     </item>
 
