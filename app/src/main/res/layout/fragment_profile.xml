@@ -156,7 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_height="wrap_content">
-        <Button
+        <button
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:id="@+id/follow_button"
@@ -164,7 +164,7 @@
             android:textSize="13sp"
             android:layout_marginTop="5dp">
 
-        </Button>
+        </button>
 
     </LinearLayout>
 
