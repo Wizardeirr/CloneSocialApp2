@@ -2,7 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:title="Anasayfa"
-        android:id="homePage">
+        android:id="homePage"
+        src>
 
     </item>
     <item
