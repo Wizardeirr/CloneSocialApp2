@@ -29,10 +29,17 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.unfollowButton.visibility=View.INVISIBLE
         binding.followButton.setOnClickListener{
-            showUnfollowButton(view)
+            binding.followButton.visibility=View.INVISIBLE
+            binding.unfollowButton.visibility=View.VISIBLE
         }
+        binding.unfollowButton.setOnClickListener {
+            binding.followButton.visibility=View.VISIBLE
+            binding.unfollowButton.visibility=View.GONE
+        }
+
+
 
 
     }
