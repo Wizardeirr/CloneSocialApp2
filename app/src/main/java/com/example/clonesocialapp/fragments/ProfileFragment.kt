@@ -33,10 +33,13 @@ class ProfileFragment : Fragment() {
         binding.followButton.setOnClickListener{
             binding.followButton.visibility=View.INVISIBLE
             binding.unfollowButton.visibility=View.VISIBLE
+            binding.notifySettings.visibility=View.VISIBLE
+
         }
         binding.unfollowButton.setOnClickListener {
             binding.followButton.visibility=View.VISIBLE
             binding.unfollowButton.visibility=View.GONE
+            binding.notifySettings.visibility=View.INVISIBLE
         }
         binding.notifySettings.setOnClickListener{
 

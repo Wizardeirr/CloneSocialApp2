@@ -175,6 +175,7 @@
             android:layout_height="35dp"
             android:text="Takipten Çık"
             android:textSize="13sp"
+
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -188,10 +189,12 @@
 
         <LinearLayout
             android:layout_width="50dp"
-            android:layout_height="35dp"
+            android:layout_height="25dp"
             android:gravity="center"
             android:id="@+id/notifySettings"
-            android:background="#EF693E"
+            android:visibility="invisible"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/oval_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/unfollow_button"
             app:layout_constraintTop_toTopOf="parent"
@@ -199,16 +202,15 @@
 
             <ImageView
                 android:id="@+id/unfollow_notify"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/notify_for_follow_settings">
 
             </ImageView>
 
             <ImageView
                 android:id="@+id/unfollow_notify_arrow"
-                android:layout_width="25dp"
-
+                android:layout_width="20dp"
                 android:layout_height="25dp"
                 android:src="@drawable/arrow_for_follow_notify"
                 tools:layout_editor_absoluteX="119dp"
