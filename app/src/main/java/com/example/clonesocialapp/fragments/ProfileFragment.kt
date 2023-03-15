@@ -38,14 +38,15 @@ class ProfileFragment : Fragment() {
             binding.followButton.visibility=View.VISIBLE
             binding.unfollowButton.visibility=View.GONE
         }
+        binding.notifySettings.setOnClickListener{
+
+        }
 
 
 
 
     }
-    private fun showUnfollowButton(view:View){
 
-    }
 
 
 
