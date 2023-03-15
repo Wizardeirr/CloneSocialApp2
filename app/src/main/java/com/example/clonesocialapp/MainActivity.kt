@@ -14,16 +14,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        jumpFragment(HomeFragment())
+        jumpFragment(SearchFragment())
         bottomNav=findViewById(R.id.bottom_navigation) as BottomNavigationView
         bottomNav.setOnItemSelectedListener {MenuItem->
             when(MenuItem.itemId){
                 R.id.homePage ->{
-                    jumpFragment(HomeFragment())
+                    jumpFragment(SearchFragment())
                     true
                 }
                 R.id.discoveryPage ->{
-                    jumpFragment(SearchFragment())
+                    jumpFragment(HomeFragment())
                     true
                 }
                 R.id.favsPage ->{
