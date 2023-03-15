@@ -5,13 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.example.clonesocialapp.R
+import com.example.clonesocialapp.databinding.BottomSheetsWindowBinding
 import com.example.clonesocialapp.databinding.FragmentProfileBinding
 import com.google.android.material.snackbar.Snackbar
 
 class ProfileFragment : Fragment() {
     private var _binding:FragmentProfileBinding?=null
     private val binding get()=_binding!!
+    lateinit var btnShowBottomSheet: Button
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +35,13 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        btnShowBottomSheet = findViewById(R.layout.bottom_sheets_window);
+
+
+
+
+
+
         binding.unfollowButton.visibility=View.INVISIBLE
         binding.followButton.setOnClickListener{
             binding.followButton.visibility=View.INVISIBLE
