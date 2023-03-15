@@ -1,22 +1,22 @@
 package com.example.clonesocialapp.fragments
 
+
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.text.Layout
-import androidx.fragment.app.Fragment
+import android.text.SpannableString
+import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.clonesocialapp.R
-import com.example.clonesocialapp.databinding.BottomSheetsWindowBinding
 import com.example.clonesocialapp.databinding.FragmentProfileBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.snackbar.Snackbar
+
 
 class ProfileFragment : Fragment() {
     private var _binding:FragmentProfileBinding?=null
@@ -42,6 +42,18 @@ class ProfileFragment : Fragment() {
     @SuppressLint("ResourceType")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //underline for post
+        val postText = view.findViewById(R.id.show_All_Post) as TextView
+        val postContent = SpannableString("Hepsini Görüntüle")
+        postContent.setSpan(UnderlineSpan(), 0, postContent.length, 0)
+        postText.text = postContent
+
+        //underline for link
+        val linkText = view.findViewById(R.id.show_all_link) as TextView
+        val linkContent = SpannableString("Tüm linkleri gör")
+        linkContent.setSpan(UnderlineSpan(), 0, linkContent.length, 0)
+        linkText.text = linkContent
 
         //Dialog Builder
         notifySettings=requireView().findViewById(R.layout.bottom_sheets_window)
