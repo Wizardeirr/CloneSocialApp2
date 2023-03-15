@@ -333,7 +333,7 @@
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_marginLeft="10dp"
-            android:gravity=""
+            android:gravity="center"
             android:text="https://www.amazon.com.tr/magaza/mobil-gelistirme"
             android:textSize="12sp">
 
