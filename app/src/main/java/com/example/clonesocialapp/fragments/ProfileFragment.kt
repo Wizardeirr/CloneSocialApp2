@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.clonesocialapp.R
 import com.example.clonesocialapp.databinding.FragmentProfileBinding
+import com.google.android.material.snackbar.Snackbar
 
 class ProfileFragment : Fragment() {
     private var _binding:FragmentProfileBinding?=null
@@ -42,6 +43,7 @@ class ProfileFragment : Fragment() {
             binding.notifySettings.visibility=View.INVISIBLE
         }
         binding.notifySettings.setOnClickListener{
+
 
         }
 

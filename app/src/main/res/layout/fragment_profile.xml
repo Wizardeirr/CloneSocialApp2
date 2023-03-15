@@ -221,7 +221,118 @@
 
 
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="390dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_margin="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:textStyle="bold"
+                android:layout_gravity=""
+                android:text="Bildirimler"
+                android:textSize="15sp">
+
+            </TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notify_icon"
+                android:layout_gravity="right"
+                android:layout_marginLeft="300dp"
+                >
+
+            </ImageView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_margin="3dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notify_icon"
+                android:layout_marginLeft="10dp"
+                >
+
+            </ImageView>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_gravity=""
+                android:text="Tümü"
+                android:textSize="15sp">
+
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_margin="3dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notify_icon"
+                android:layout_marginLeft="10dp"
+                >
+
+            </ImageView>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_gravity=""
+                android:text="Yok"
+                android:textSize="15sp">
+
+            </TextView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_margin="3dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notify_icon"
+                android:layout_marginLeft="10dp"
+                >
+
+            </ImageView>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_gravity=""
+                android:text="Takipten Çık"
+                android:textSize="15sp">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
