@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import com.example.clonesocialapp.fragments.FavFragment
 import com.example.clonesocialapp.home.HomeFragment
 import com.example.clonesocialapp.fragments.ProfileFragment
-import com.example.clonesocialapp.fragments.SearchFragment
+import com.example.clonesocialapp.searchfragment.SearchFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
