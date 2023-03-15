@@ -38,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:text="X"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:layout_marginLeft="290dp"
                 android:src="@drawable/notify_icon">
@@ -57,20 +58,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
                 android:src="@drawable/notify_icon">
 
             </ImageView>
 
             <TextView
 
+                android:layout_margin="3dp"
+
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity=""
+                android:layout_gravity="center"
                 android:text="Tümü"
                 android:textSize="15sp"
                 android:textStyle="bold">
 
             </TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:layout_gravity="center"
+                android:id="@+id/verify_icon"
+                android:src="@drawable/verify_icon"
+                android:visibility="visible">
+
+            </ImageView>
 
         </LinearLayout>
 
@@ -84,6 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
                 android:src="@drawable/unfollow_icon">
 
             </ImageView>
@@ -93,10 +109,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Yok"
+                android:layout_margin="3dp"
+
+                android:layout_gravity="center"
                 android:textSize="15sp"
                 android:textStyle="bold">
 
             </TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="293dp"
+                android:id="@+id/verify_for_none"
+                android:layout_gravity="center"
+                android:src="@drawable/verify_icon"
+                android:visibility="invisible">
+
+            </ImageView>
 
 
 
@@ -119,6 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
                 android:src="@drawable/notify_off">
 
             </ImageView>
@@ -128,6 +158,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Takipten Çık"
+                android:layout_margin="3dp"
+                android:layout_gravity="center"
                 android:textSize="15sp"
                 android:textStyle="bold">
 

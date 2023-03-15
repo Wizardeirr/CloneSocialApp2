@@ -52,41 +52,61 @@ class ProfileFragment : Fragment() {
         //Follower Splash
         binding.unfollowButton.visibility=View.INVISIBLE
         binding.followButton.setOnClickListener{
-            binding.followButton.visibility=View.INVISIBLE
-            binding.unfollowButton.visibility=View.VISIBLE
-            binding.notifySettings.visibility=View.VISIBLE
-
+            showExtraButtons()
         }
         binding.unfollowButton.setOnClickListener {
-            binding.followButton.visibility=View.VISIBLE
-            binding.unfollowButton.visibility=View.GONE
-            binding.notifySettings.visibility=View.INVISIBLE
+            closeExtraButtons()
         }
 
     }
+    private fun showExtraButtons(){
+        binding.followButton.visibility=View.INVISIBLE
+        binding.unfollowButton.visibility=View.VISIBLE
+        binding.notifySettings.visibility=View.VISIBLE
+
+    }
+    private fun closeExtraButtons(){
+        binding.followButton.visibility=View.VISIBLE
+        binding.unfollowButton.visibility=View.GONE
+        binding.notifySettings.visibility=View.INVISIBLE
+    }
     private fun showDialogSheet(){
         val dialog = BottomSheetDialog(requireContext())
+
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.bottom_sheets_window)
         dialog.show()
+        //for close
         val closeWindow=dialog.findViewById<View>(R.id.cancel_window)
         closeWindow?.setOnClickListener {
             dialog.dismiss()
         }
+        //change options
         val allofthem=dialog.findViewById<View>(R.id.all_layout)
         allofthem?.setOnClickListener{
-
             Toast.makeText(requireContext(), "All Working", Toast.LENGTH_SHORT).show()
+            val verifyIcon=dialog.findViewById<View>(R.id.verify_icon)
+            val verifyIconNone=dialog.findViewById<View>(R.id.verify_for_none)
+            verifyIconNone?.visibility=View.INVISIBLE
+            verifyIcon?.visibility=View.VISIBLE
         }
+        //change options last position
         val none=dialog.findViewById<View>(R.id.none_layout)
         none?.setOnClickListener{
             Toast.makeText(requireContext(), "Cancel Working", Toast.LENGTH_SHORT).show()
+            val verifyIcon=dialog.findViewById<View>(R.id.verify_icon)
+            val verifyIconNone=dialog.findViewById<View>(R.id.verify_for_none)
+            verifyIconNone?.visibility=View.VISIBLE
+            verifyIcon?.visibility=View.INVISIBLE
 
         }
+
+        //unfollow option
         val unfollow=dialog.findViewById<View>(R.id.unfollow_layout)
         unfollow?.setOnClickListener{
             Toast.makeText(requireContext(), "unfollow working", Toast.LENGTH_SHORT).show()
-
+            closeExtraButtons()
+            dialog.dismiss()
         }
     }
 }
