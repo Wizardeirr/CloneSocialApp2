@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/window_sheet"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -31,14 +32,15 @@
 
             </TextView>
 
-            <ImageView
+            <Button
+                android:id="@+id/cancel_window"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginLeft="290dp"
                 android:src="@drawable/notify_icon">
 
-            </ImageView>
+            </Button>
 
 
         </LinearLayout>
@@ -46,6 +48,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:id="@+id/allofthem"
             android:layout_margin="3dp">
 
             <ImageView
@@ -70,6 +73,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/none"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_margin="3dp">
@@ -106,7 +110,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_margin="3dp">
+            android:layout_margin="3dp"
+            android:id="@+id/unfollow">
 
             <ImageView
                 android:layout_width="wrap_content"

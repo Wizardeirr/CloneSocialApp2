@@ -1,21 +1,25 @@
 package com.example.clonesocialapp.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.Toast
 import com.example.clonesocialapp.R
 import com.example.clonesocialapp.databinding.BottomSheetsWindowBinding
 import com.example.clonesocialapp.databinding.FragmentProfileBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.Snackbar
 
 class ProfileFragment : Fragment() {
     private var _binding:FragmentProfileBinding?=null
     private val binding get()=_binding!!
-    lateinit var btnShowBottomSheet: Button
-
+    private var notifySettings: Button?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,9 +37,20 @@ class ProfileFragment : Fragment() {
         return view
     }
 
+    @SuppressLint("ResourceType")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        btnShowBottomSheet = findViewById(R.layout.bottom_sheets_window);
+
+        notifySettings=requireView().findViewById(R.layout.bottom_sheets_window)
+        binding.notifySettings.setOnClickListener {
+            Toast.makeText(requireContext(), "Working", Toast.LENGTH_SHORT).show()
+            val dialog = BottomSheetDialog(requireContext())
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+            dialog.setContentView(R.layout.bottom_sheets_window)
+            dialog.show()
+        }
+
+
 
 
 
@@ -54,15 +69,16 @@ class ProfileFragment : Fragment() {
             binding.unfollowButton.visibility=View.GONE
             binding.notifySettings.visibility=View.INVISIBLE
         }
-        binding.notifySettings.setOnClickListener{
 
-
-        }
 
 
 
 
     }
+
+
+
+
 
 
 
