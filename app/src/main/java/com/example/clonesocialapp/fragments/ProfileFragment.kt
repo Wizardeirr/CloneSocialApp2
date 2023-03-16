@@ -59,7 +59,7 @@ class ProfileFragment : Fragment() {
         notifySettings=requireView().findViewById(R.layout.bottom_sheets_window)
         binding.notifySettings.setOnClickListener {
             showDialogSheet()
-            Toast.makeText(requireContext(), "Working", Toast.LENGTH_SHORT).show()
+
         }
         //Follower Splash
         binding.unfollowButton.visibility=View.INVISIBLE
@@ -108,7 +108,7 @@ class ProfileFragment : Fragment() {
         //change options last position
         val none=dialog.findViewById<View>(R.id.none_layout)
         none?.setOnClickListener{
-            Toast.makeText(requireContext(), "Cancel Working", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Canceled", Toast.LENGTH_SHORT).show()
             val verifyIcon=dialog.findViewById<View>(R.id.verify_icon)
             val verifyIconNone=dialog.findViewById<View>(R.id.verify_for_none)
             verifyIconNone?.visibility=View.VISIBLE
@@ -119,7 +119,7 @@ class ProfileFragment : Fragment() {
         //unfollow option
         val unfollow=dialog.findViewById<View>(R.id.unfollow_layout)
         unfollow?.setOnClickListener{
-            Toast.makeText(requireContext(), "unfollow working", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Unfollowed", Toast.LENGTH_SHORT).show()
             closeExtraButtons()
             dialog.dismiss()
         }
