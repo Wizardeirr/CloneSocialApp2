@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import com.example.clonesocialapp.R
 import com.example.clonesocialapp.databinding.FragmentHomeBinding
 import com.example.clonesocialapp.databinding.FragmentSearchBinding
+import com.google.android.exoplayer2.database.ExoDatabaseProvider
+import com.google.android.exoplayer2.upstream.cache.SimpleCache
 
 class SearchFragment : Fragment() {
 
@@ -28,7 +30,6 @@ class SearchFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
 
 }
