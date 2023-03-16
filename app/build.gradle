@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'kotlin-android'
+
 }
 
 android {
@@ -68,5 +69,6 @@ dependencies {
 
 
     // dependency for loading image from url
+
 
 }
