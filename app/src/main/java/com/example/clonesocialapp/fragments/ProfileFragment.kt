@@ -69,6 +69,9 @@ class ProfileFragment : Fragment() {
         binding.unfollowButton.setOnClickListener {
             closeExtraButtons()
         }
+        binding.clickForMap.setOnClickListener {
+            showDialogForMap()
+        }
 
     }
     private fun showExtraButtons(){
@@ -120,5 +123,12 @@ class ProfileFragment : Fragment() {
             closeExtraButtons()
             dialog.dismiss()
         }
+    }
+    private fun showDialogForMap(){
+        val dialog = BottomSheetDialog(requireContext())
+
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(R.layout.bottom_sheet_map)
+        dialog.show()
     }
 }

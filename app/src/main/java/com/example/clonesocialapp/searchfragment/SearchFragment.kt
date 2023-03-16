@@ -37,13 +37,7 @@ class SearchFragment : Fragment() {
     "https://images.pexels.com/photos/2421373/pexels-photo-2421373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/2453237/pexels-photo-2453237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     )
-    private var line:Array<TextView?> = arrayOfNulls<TextView>(mImageList.size)
-    private var onImageChangeCallBack=object :ViewPager2.OnPageChangeCallback(){
-        override fun onPageSelected(position: Int) {
-            super.onPageSelected(position)
-            addLineView(position)
-        }
-    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,19 +57,22 @@ class SearchFragment : Fragment() {
         viewPagerAdapter= SliderAdapter(mImageList)
         mViewPager.apply {
             adapter=viewPagerAdapter
-            registerOnPageChangeCallback(onImageChangeCallBack)
+
         }
         startFirstPicture()
         lifecycleScope.launch {
             while (true){
                 for (i in 0..mImageList.size){
-                    delay(10000000000)
+                    var stop = false
+                    delay(10000)
 
                     if (i==0){
                         mViewPager.setCurrentItem(i,false)
 
 
-                    }else{
+                    }
+
+                    else{
                         mViewPager.setCurrentItem(i,true)
 
 
@@ -86,28 +83,14 @@ class SearchFragment : Fragment() {
 
 
 }
-    private fun addLineView(currentPage:Int){
-        binding.progressLine.removeAllViews()
-        for(i in mImageList.indices){
-            line[i]= TextView(activity)
-            if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.N){
-                line[i]?.text = Html.fromHtml("&#8226",Html.FROM_HTML_MODE_LEGACY)
-            }else{
-                line[i]?.text = Html.fromHtml("",Html.FROM_HTML_MODE_LEGACY)
-            }
-            line[i]?.textSize=50f
-            line[i]?.setTextColor(ContextCompat.getColor(requireContext(),R.color.white))
-            binding.progressLine.addView(line[i])
-        }
 
-    }
     fun startFirstPicture(){
         val countDownTimer=object :CountDownTimer(20000,2000){
             override fun onTick(p0: Long) {
                 if (binding.progressBar.progress<binding.progressBar.max){
                     binding.progressBar.progress+=10
                 }else{
-                    binding.progressBar.progress=5
+                    binding.progressBar.progress=0
                 }
                 if (binding.progressBar.secondaryProgress<binding.progressBar.max){
                     binding.progressBar.secondaryProgress+=1

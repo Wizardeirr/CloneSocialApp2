@@ -25,6 +25,7 @@ class SliderAdapter(private var mImageList:List<String>):
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
         holder.bind(mImageList[position])
+
     }
     class ImageViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         private val sliderImageView=itemView.findViewById<ShapeableImageView>(R.id.sliderImageView  )

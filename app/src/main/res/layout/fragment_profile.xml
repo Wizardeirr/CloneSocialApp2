@@ -143,10 +143,11 @@
 
         </TextView>
         <ImageView
+            android:id="@+id/clickForMap"
             android:layout_width="25dp"
             android:layout_marginLeft="3dp"
             android:layout_height="25dp"
-            android:src="@drawable/search_icon"
+            android:src="@drawable/search_icon_orange"
             >
         </ImageView>
 
